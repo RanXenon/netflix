@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/favicon.png" type="image/x-icon">
+    <title>Payment Details</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:  rgb(238, 134, 134);
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            gap: 20px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            padding: 20px;
+        }
+
+        .form-container h2 {
+            color: #a200ff;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 96%;
+            padding: 6px;
+            border-radius: 12px;
+            border: 2px solid #0c1013;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #800080;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #a200ff;
+        }
+
+        .divider {
+            width: 5px;
+            background-color: hsl(0, 0%, 0%);
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Credit Card Payment Section -->
+    <div class="form-container">
+        <img src="./Assets/cardpay.png" width="430" height="80">
+        <form>
+        </br>
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" placeholder="Enter card number" required>
+            </div>
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="CVV" required>
+            </div>
+            <div class="form-group">
+                <label for="cardHolderName">Cardholder Name</label>
+                <input type="text" id="cardHolderName" placeholder="Cardholder Name" required>
+            </div>
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+
+    <!-- Divider -->
+    <div class="divider"></div>
+
+    <!-- UPI Payment Section -->
+    <div class="form-container">
+        <img src="./Assets/upi2.png" width="430" height="80">
+        <form>
+        </br>
+            <div class="form-group">
+                <label for="upiId">UPI ID</label>
+                <input type="text" id="upiId" placeholder="Enter UPI ID" required>
+            </div>
+            <div class="form-group">
+                <label for="upiAmount">Amount</label>
+                <input type="text" id="upiAmount" placeholder="Enter amount" required>
+            </div>
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

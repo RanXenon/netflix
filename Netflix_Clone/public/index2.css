@@ -1,0 +1,288 @@
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add this to your index2.css */
+/* Add this to your index2.css */
+
+/* Add this to your index2.css */
+
+.user-info-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(115, 0, 255);
+    border: none;
+    color: white;
+    padding: 8px; /* Reduced padding for smaller size */
+    border-radius: 50%; /* Makes the button round */
+    cursor: pointer;
+    z-index: 1000; /* Ensure it sits above other content */
+    width: 40px; /* Set width for a perfect circle */
+    height: 40px; /* Set height for a perfect circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info-btn i {
+    font-size: 20px; /* Decrease icon size */
+}
+
+
+.user-info-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #121212;
+    color: white;
+    padding: 30px; /* Increased padding for larger card */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 1000; /* Ensure it sits above other content */
+    width: 300px; /* Adjust width */
+}
+
+.user-info-popup.show {
+    display: block;
+}
+
+.user-info-popup p {
+    margin: 0;
+    font-size: 1.5rem; /* Increased font size */
+    margin-bottom: 20px;
+}
+
+.user-info-popup #username {
+    font-weight: bold; /* Make username bold */
+}
+
+.subscribe-btn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.subscribe-btn:hover {
+    background-color:rgb(115, 0, 255); /* Red color on hover */
+}
+
+.subscribe-btn2 {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.subscribe-btn2:hover {
+    background-color:  rgb(115, 0, 255); /* Red color on hover */
+}
+
+.logout-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color:red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: rgb(115, 0, 255);
+}
+
+
+.section-content h2 {
+    color: white;
+    text-align: left;
+    margin-left: 50px;
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+
+.scrollable-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    margin: 0 50px;
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 183.3x;
+    margin-right: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item img {
+    width: 183.3px; /* Set a fixed width */
+    height: 150px; /* Set a fixed height */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+.item img:hover {
+    transform: scale(1.05);
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(20, 20, 20, 0.7);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.left-button {
+    left: 10px;
+}
+
+.right-button {
+    right: 10px;
+}
+
+.scroll-button i {
+    font-size: 24px;
+}
+
+.scrollable-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.page-content {
+    /* This will contain all page content that should be blurred */
+    position: relative;
+}
+
+/* Blur effect for the background when the video is playing */
+.blur-background {
+    filter: blur(10px);
+    transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+    pointer-events: none; /* Disable interaction with background content */
+}
+
+/* Pop-down Video Display */
+.video-display {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the video display */
+    width: 80%; /* Adjust as needed */
+    height: 80%; /* Adjust as needed */
+    background-color: #121212;
+    color: white;
+    display: none;
+    flex-direction: row; /* Horizontal layout for video and description */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Add shadow for better pop effect */
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000; /* Ensure it sits above other content */
+}
+.video-display.show {
+    display: flex;
+    opacity: 1;
+}
+
+.video-display video {
+    width: 60%; /* 60% of the screen width for the video */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.video-display .description-area {
+    width: 35%; /* 35% for the description and button */
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.video-display .description {
+    font-size: 1.5rem; /* Larger text size */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.video-display .membership-btn {
+    padding: 10px 20px;
+    background-color: rgb(115, 0, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.video-display .membership-btn:hover {
+    background-color: red;
+}
+
+.video-display .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 36px; /* Larger size for better visibility */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.video-display .close-btn:hover {
+    color: #ff0000; /* Red color on hover */
+}
+.scroll-button .left-button:hover{
+    color: #ff0000;
+}
+.scroll-button .right-button:hover{
+    color: #ff0000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .video-display video {
+        width: 100%; /* Full width for small screens */
+        margin-bottom: 20px;
+    }
+
+    .video-display .description-area {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .video-display {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+}

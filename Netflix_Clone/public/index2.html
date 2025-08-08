@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/391827d54c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./Assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="index2.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>Netflix Series, TV Shows, Animes & Movies</title>
+</head>
+<body>
+    <div class="user-info-popup" id="userInfoPopup">
+        <p id="usernameDisplay">Welcome<span id="username"></span></p>
+        <a href="membership.html" class="subscribe-btn">Subscribe Now</a>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+
+    <button class="user-info-btn" onclick="toggleUserInfoPopup()">
+        <i class="fas fa-user"></i>
+    </button>
+
+    <div class="page-content">
+        <!-- Series Section -->
+        <section class="section-content container">
+            <h2>Popular Series</h2>
+            <div class="position-relative">
+                <button class="scroll-button left-button" id="scrollLeftSeries">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="scrollable-container" id="seriesContainer">
+                    <div class="item" onclick="playVideo(1, 'https://www.youtube.com/embed/GSycMV-_Csw?si=rZJehF2GbTOWg5J6', 'Series 1 Description')">
+                        <img src="./Assets/S1.png" alt="Series 1">
+                        <p>Prime</p>
+                    </div>
+                    <div class="item" onclick="playVideo(7, 'https://www.youtube.com/embed/2QP-xrG0kZk?si=0NLswYezft6_S75_', 'Series 2 Description')">
+                        <img src="./Assets/S2.png" alt="Series 2">
+                        <p>AppTV+</p>
+                    </div>
+                    
+                    <div class="item" onclick="playVideo(8, 'https://www.youtube.com/embed/gF3gZicntIw?si=NoN5Khwm5JWL6GU4', 'Series 3 Description')">
+                        <img src="./Assets/S3.png" alt="Series 3">
+                        <p>Rebel</p>
+                    </div>
+                    <div class="item" onclick="playVideo(20,'https://www.youtube.com/embed/qU5-M1KrEAE?si=GSBy_IiKGXUe8gxl' , 'Series 4 Description')">
+                        <img src="./Assets/S4.png" alt="Series 4">
+                        <p>S Home</p>
+                    </div>
+                    <div class="item" onclick="playVideo(21,'https://www.youtube.com/embed/eES65pr2POM?si=USPCRY0_NfCPUOzf', 'Series 5 Description')">
+                        <img src="./Assets/S5.png" alt="Series 5">
+                        <p>Sector 36</p>
+                    </div>
+                    <div class="item" onclick="playVideo(22, 'https://www.youtube.com/embed/Okkl91vrmYk?si=ZJBdcwT2xlmuvkyu', 'Series 6 Description')">
+                        <img src="./Assets/S6.png" alt="Series 6">
+                        <p>HBO</p>
+                    </div>
+                    <div class="item" onclick="playVideo(23, 'https://www.youtube.com/embed/wqbZlAEUb5w?si=YwwrrxZ7CsBlHveD', 'Series 7 Description')">
+                        <img src="./Assets/S7.png" alt="Series 7">
+                        <p>House</p>
+                    </div>
+                    <div class="item" onclick="playVideo(24, 'https://www.youtube.com/embed/_InqQJRqGW4?si=DBBgMM7-4IIo4L2_', 'Series 8 Description')">
+                        <img src="./Assets/S8.png" alt="Series 8">
+                        <p>Money Hiest</p>
+                    </div>
+                </div>
+
+                <button class="scroll-button right-button" id="scrollRightSeries">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section: TV Shows -->
+<section class="section-content container">
+    <h2>Top TV Shows</h2>
+    <div class="scrollable-container" id="tvShowsContainer">
+        <div class="item" onclick="playVideo(2,'https://www.youtube.com/embed/fC80eBZkqBE?si=XArwIeo1VQiKTebi', 'TV Show 1 Description')">
+            <img src="./Assets/TV1.png" alt="TV Show 1">
+            <p>Bigg Boss</p>
+        </div>
+        <div class="item" onclick="playVideo(9,'https://www.youtube.com/embed/GXrDYboUnnw?si=hiGGBD0l9Du03jQ7', 'TV Show 2 Description')">
+            <img src="./Assets/TV2.png" alt="TV Show 2">
+            <p>Original</p>
+        </div>
+        <div class="item" onclick="playVideo(10,'https://www.youtube.com/embed/0IOsk2Vlc4o?si=yHa1dm9mLOKdYuMN', 'TV Show 3 Description')">
+            <img src="./Assets/TV3.png" alt="TV Show 3">
+            <p>One Train</p>
+        </div>
+        <div class="item" onclick="playVideo(18,'https://www.youtube.com/embed/bftjfqS3v6k?si=6xB6M8kar4RKVafA', 'TV Show 2 Description')">
+            <img src="./Assets/TV4.png" alt="TV Show 2">
+            <p>Kapil Sharma Show</p>
+        </div>
+        <div class="item" onclick="playVideo(19,'https://www.youtube.com/embed/cEukRxuyEUg?si=7UF_HogEdOVXVmbn', 'TV Show 2 Description')">
+            <img src="./Assets/TV5.png" alt="TV Show 2">
+            <p>Taaza Khabar</p>
+        </div>
+    </div>
+</section>
+
+<!-- Section: Animes -->
+<section class="section-content container">
+    <h2>Popular Animes</h2>
+    <div class="scrollable-container" id="animesContainer">
+        <div class="item" onclick="playVideo(3,'https://www.youtube.com/embed/yqN7nHM1YTA?si=U5znTJ49qYCEe5KA', 'Anime 1 Description')">
+            <img src="./Assets/A1.png" alt="Anime 1">
+            <p>Kung Fu Panda 3</p>
+        </div>
+        <div class="item" onclick="playVideo(11,'https://www.youtube.com/embed/yCOPJi0Urq4?si=OCPDOrFWlKo06j8l', 'Anime 2 Description')">
+            <img src="./Assets/A2.png" alt="Anime 2">
+            <p>Zootopia</p>
+        </div>
+        <div class="item" onclick="playVideo(12,'https://www.youtube.com/embed/MCb13lbVGE0?si=Jy4WBlYkoBl9jx-6', 'Anime 3 Description')">
+            <img src="./Assets/A3.png" alt="Anime 3">
+            <p>One Piece</p>
+        </div>
+        <div class="item" onclick="playVideo(15,'https://www.youtube.com/embed/FmpmO6GIGvQ?si=zAeNcT6Nm7ZYPZPV', 'Anime 3 Description')">
+            <img src="./Assets/A4.png" alt="Anime 3">
+            <p>Shinchan</p>
+        </div>
+        <div class="item" onclick="playVideo(17,'https://www.youtube.com/embed/02jcxBEIWpg?si=rwG1HT-bqs0HYDOC', 'Anime 3 Description')">
+            <img src="./Assets/A5.png" alt="Anime 3">
+            <p>Anime</p>
+        </div>
+    </div>
+</section>
+
+        <!-- Movies Section -->
+        <section class="section-content container">
+            <h2>Top Movies</h2>
+            <div class="position-relative">
+                <button class="scroll-button left-button" id="scrollLeftMovies">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="scrollable-container" id="moviesContainer">
+                    <div class="item" onclick="playVideo(4, 'https://www.youtube.com/embed/aQr3-svRGUI?si=Sggu0WBLWlNG0Ixl', 'Movie 1 Description')">
+                        <img src="./Assets/M1.png" alt="Movie 1">
+                        <p>Max</p>
+                    </div>
+                    <div class="item" onclick="playVideo(5, 'https://www.youtube.com/embed/AjX4vpDy-AE?si=lX3VVGnLpgrh5LBV', 'Movie 2 Description')">
+                        <img src="./Assets/M2.png" alt="Movie 2">
+                        <p>Toxic</p>
+                    </div>
+                    <div class="item" onclick="playVideo(6,'https://www.youtube.com/embed/aninoDcPWo4?si=GyedQmtmMUPP-pRE', 'Movie 3 Description')">
+                        <img src="./Assets/M3.png" alt="Movie 3">
+                        <p>Kalki</p>
+                    </div>
+                    <div class="item" onclick="playVideo(13,'https://www.youtube.com/embed/TcMBFSGVi1c?si=JmOeolo9ECpwFdou', 'Movie 4 Description')">
+                        <img src="./Assets/M4.png" alt="Movie 4">
+                        <p>Endgame</p>
+                    </div>
+                    <div class="item" onclick="playVideo(14,'https://www.youtube.com/embed/xVnHZ5SF1Jg?si=-kPPAbUhCr1_C6ms', 'Movie 4 Description')">
+                        <img src="./Assets/M5.png" alt="Movie 4">
+                        <p>Swamp Thing</p>
+                    </div>
+                    <div class="item" onclick="playVideo(16,'https://www.youtube.com/embed/73_1biulkYk?si=jmWzm1irxYhYOIcY', 'Movie 4 Description')">
+                        <img src="./Assets/M6.png" alt="Movie 4">
+                        <p>Deadpool</p>
+                    </div>
+                    <div class="item" onclick="playVideo(25,'https://www.youtube.com/embed/Frp0zC4643U?si=iaPGELn8Z-mTRKQD', 'Movie 4 Description')">
+                        <img src="./Assets/M7.png" alt="Movie 4">
+                        <p>Kantara</p>
+                    </div>
+                    <div class="item" onclick="playVideo(26,'https://www.youtube.com/embed/tQ0mzXRk-oM?si=mx0tCQYto2iLrEir', 'Movie 4 Description')">
+                        <img src="./Assets/M8.png" alt="Movie 4">
+                        <p>War</p>
+                    </div>
+                    <div class="item" onclick="playVideo(27,'https://www.youtube.com/embed/Xcw4dkILsmk?si=XzirMec-ejGh7swd', 'Movie 4 Description')">
+                        <img src="./Assets/M9.png" alt="Movie 4">
+                        <p>Pushpa 2</p>
+                    </div>
+                    <div class="item" onclick="playVideo(28,'https://www.youtube.com/embed/L1KYlnMRtqc?si=T6Wg2eQ8ySYsR_s0', 'Movie 4 Description')">
+                        <img src="./Assets/M10.png" alt="Movie 4">
+                        <p>Kaatera</p>
+                    </div>
+                </div>
+
+                <button class="scroll-button right-button" id="scrollRightMovies">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+    </div>
+    <center>
+        <h2><b>Join today, no reason to wait.</b></h2>
+        <p>Stream on your phone, tablet, laptop, TV and more.</p>
+        <a href="membership.html" class="subscribe-btn2">Subscribe Now</a>
+    </center>
+
+    <!-- Pop-down Video Display -->
+    <div class="video-display" id="videoDisplay">
+        <video controls>
+            <source id="videoSource" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <iframe id="videoIframe" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <div class="description-area">
+            <div class="description" id="videoDescription"></div>
+            <a href="membership.html" class="membership-btn">Subcribe to Watch</a>
+        </div>
+        <button class="close-btn" onclick="closeVideo()">×</button>
+    </div>
+
+    <script>
+        // Scrolling functionality for Series
+        document.getElementById('scrollLeftSeries').onclick = function () {
+            document.getElementById('seriesContainer').scrollBy({
+                left: -200,
+                behavior: 'smooth'
+            });
+        };
+
+        document.getElementById('scrollRightSeries').onclick = function () {
+            document.getElementById('seriesContainer').scrollBy({
+                left: 200,
+                behavior: 'smooth'
+            });
+        };
+
+        document.getElementById('scrollLeftMovies').onclick = function () {
+        document.getElementById('moviesContainer').scrollBy({
+            left: -200,
+            behavior: 'smooth'
+        });
+    };
+
+    document.getElementById('scrollRightMovies').onclick = function () {
+        document.getElementById('moviesContainer').scrollBy({
+            left: 200,
+            behavior: 'smooth'
+        });
+    };
+
+        function toggleUserInfoPopup() {
+            const popup = document.getElementById('userInfoPopup');
+            popup.classList.toggle('show');
+        }
+
+    // Fetch and display the username
+    document.addEventListener('DOMContentLoaded', () => {
+    fetch('/get-username')
+        .then(response => response.json())
+        .then(data => {
+            const usernameElement = document.getElementById('username');
+            if (data.username) {
+                usernameElement.textContent = `, ${data.username}`;
+            } else {
+                usernameElement.textContent = ', Guest';
+            }
+        })
+        .catch(error => console.error('Error fetching username:', error));
+});
+
+
+        // Play video and update view count
+        function playVideo(videoId, src, description) {
+    const videoDisplay = document.getElementById('videoDisplay');
+    const videoElement = videoDisplay.querySelector('video');
+    const iframeElement = document.getElementById('videoIframe'); // Add an iframe for YouTube videos
+    const descriptionElement = document.getElementById('videoDescription');
+    const sourceElement = document.getElementById('videoSource');
+    const pageContent = document.querySelector('.page-content');
+
+    // Reset both video and iframe elements
+    videoElement.style.display = 'none';
+    iframeElement.style.display = 'none';
+
+    descriptionElement.textContent = description;
+    videoDisplay.classList.add('show');
+    pageContent.classList.add('blur-background');
+
+    // Check if the source is a YouTube link
+    if (src.includes('youtube.com') || src.includes('youtu.be')) {
+        // If it's a YouTube link, add autoplay parameter
+        let autoplaySrc = src.includes('?') ? `${src}&autoplay=1` : `${src}?autoplay=1`;
+        
+        iframeElement.src = autoplaySrc;
+        iframeElement.style.display = 'block';
+    } else {
+        // If it's a local video, use the video element
+        sourceElement.src = src;
+        videoElement.style.display = 'block';
+        videoElement.load();
+        videoElement.oncanplay = () => {
+            videoElement.play();
+        };
+    }
+
+
+
+            // Update views count by sending request to the server
+            fetch(`/update-views/${videoId}`, {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Views updated:', data);
+            })
+            .catch(error => {
+                console.error('Error updating views:', error);
+            });
+}
+
+function closeVideo() {
+    const videoDisplay = document.getElementById('videoDisplay');
+    const videoElement = videoDisplay.querySelector('video');
+    const sourceElement = document.getElementById('videoSource');
+    const iframeElement = document.getElementById('videoIframe');
+    const pageContent = document.querySelector('.page-content');
+
+    // Stop and reset the local video (if playing)
+    if (videoElement.style.display === 'block') {
+        videoElement.pause();
+        videoElement.currentTime = 0;
+        sourceElement.src = '';  // Clear the video source
+        videoElement.load();
+    }
+
+    // Stop the YouTube video by resetting the iframe src
+    if (iframeElement.style.display === 'block') {
+        iframeElement.src = '';  // Reset the iframe source to stop the YouTube video
+    }
+
+    // Hide the video display and remove background blur
+    videoDisplay.classList.remove('show');
+    pageContent.classList.remove('blur-background');
+    
+    // Hide both video and iframe elements after closing
+    videoElement.style.display = 'none';
+    iframeElement.style.display = 'none';
+}
+
+</script>
+</body>
+</html>
